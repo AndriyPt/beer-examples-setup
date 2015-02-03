@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo apt-get install git -y
+
+git clone https://github.com/shadow-robot/sr-build-tools.git
+
+./sr-build-tools/bin/sr-install-indigo-source
+
+cd ~/workspace/src
+git clone https://github.com/AndriyPt/beer-examples.git
+cd ~/workspace/
+catkin_make
+
+echo Beer installed sucessfully
